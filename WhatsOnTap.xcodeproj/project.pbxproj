@@ -13,6 +13,7 @@
 		431956D71D0F4370000EC3F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431956D51D0F4370000EC3F5 /* Main.storyboard */; };
 		431956D91D0F4370000EC3F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431956D81D0F4370000EC3F5 /* Assets.xcassets */; };
 		431956DC1D0F4370000EC3F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431956DA1D0F4370000EC3F5 /* LaunchScreen.storyboard */; };
+		94640F791D0F47610035A2DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94640F781D0F47610035A2DE /* GoogleService-Info.plist */; };
 		CAEDB7F515B954F3993C48A8 /* libPods-WhatsOnTap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0560FBEE0B7B86DE28141AE /* libPods-WhatsOnTap.a */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		431956DB1D0F4370000EC3F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		431956DD1D0F4370000EC3F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		606BB14BE681ED86A04A91FB /* Pods-WhatsOnTap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsOnTap.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsOnTap/Pods-WhatsOnTap.release.xcconfig"; sourceTree = "<group>"; };
+		94640F781D0F47610035A2DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0560FBEE0B7B86DE28141AE /* libPods-WhatsOnTap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhatsOnTap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5117687E1040A6F6D3479B3 /* Pods-WhatsOnTap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsOnTap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsOnTap/Pods-WhatsOnTap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 				431956D81D0F4370000EC3F5 /* Assets.xcassets */,
 				431956DA1D0F4370000EC3F5 /* LaunchScreen.storyboard */,
 				431956DD1D0F4370000EC3F5 /* Info.plist */,
+				94640F781D0F47610035A2DE /* GoogleService-Info.plist */,
 				431956CC1D0F4370000EC3F5 /* Supporting Files */,
 			);
 			path = WhatsOnTap;
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				431956DC1D0F4370000EC3F5 /* LaunchScreen.storyboard in Resources */,
+				94640F791D0F47610035A2DE /* GoogleService-Info.plist in Resources */,
 				431956D91D0F4370000EC3F5 /* Assets.xcassets in Resources */,
 				431956D71D0F4370000EC3F5 /* Main.storyboard in Resources */,
 			);
