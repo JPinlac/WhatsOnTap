@@ -2,6 +2,24 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:FeedViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:FeedViewController.m">
+   </FileRef>
+   <FileRef
+      location = "group:SearchViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:SearchViewController.m">
+   </FileRef>
+   <FileRef
+      location = "group:UserViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:UserViewController.m">
+   </FileRef>
+   <FileRef
       location = "group:WhatsOnTap.xcodeproj">
    </FileRef>
    <FileRef
