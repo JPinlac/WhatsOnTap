@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "User.h"
 
 @interface LoginViewController ()
 
@@ -18,7 +19,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+//    _loginButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     loginButton.center = self.view.center;
+    loginButton.delegate = self;
     [self.view addSubview:loginButton];
 }
 
@@ -26,7 +29,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)loginButton:	(FBSDKLoginButton *)loginButton
+didCompleteWithResult:	(FBSDKLoginManagerLoginResult *)result
+              error:	(NSError *)error{
+    NSLog(@"HI");
+    [[User getUser]initUser:result];
+    NSLog(@"%@", [User getUser].token);
+}
 
+- (void) loginButtonDidLogOut:(FBSDKLoginButton *)loginButton{
+    NSLog(@"bye");
+}
 /*
 #pragma mark - Navigation
 

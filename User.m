@@ -21,4 +21,8 @@
     return curentUser;
 }
 
+- (id)initUser:(FBSDKLoginManagerLoginResult *)result{
+    self.token = result.token;
+    return self;
+}
 @end

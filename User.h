@@ -17,4 +17,5 @@
 @property NSMutableArray *starredBeers;
 
 + (instancetype)getUser;
+- (id)initUser:(FBSDKLoginManagerLoginResult *)result;
 @end
