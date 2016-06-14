@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
+@import Firebase;
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+
 
 @interface AppDelegate ()
 
@@ -22,6 +24,8 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
+    [FIRApp configure];
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
     return YES;
