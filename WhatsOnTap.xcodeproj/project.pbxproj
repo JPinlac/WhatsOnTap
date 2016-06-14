@@ -15,6 +15,9 @@
 		431C61FD1D104595008D0249 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C61FC1D104595008D0249 /* User.m */; };
 		431C62021D104D45008D0249 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C62011D104D45008D0249 /* LoginViewController.m */; };
 		94640F791D0F47610035A2DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94640F781D0F47610035A2DE /* GoogleService-Info.plist */; };
+		C672FBAD1D108FFF0046A932 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C672FBA81D108FFF0046A932 /* FeedViewController.m */; };
+		C672FBAE1D108FFF0046A932 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C672FBAA1D108FFF0046A932 /* SearchViewController.m */; };
+		C672FBAF1D108FFF0046A932 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C672FBAC1D108FFF0046A932 /* UserViewController.m */; };
 		CAEDB7F515B954F3993C48A8 /* libPods-WhatsOnTap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0560FBEE0B7B86DE28141AE /* libPods-WhatsOnTap.a */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +37,12 @@
 		606BB14BE681ED86A04A91FB /* Pods-WhatsOnTap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsOnTap.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsOnTap/Pods-WhatsOnTap.release.xcconfig"; sourceTree = "<group>"; };
 		94640F781D0F47610035A2DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0560FBEE0B7B86DE28141AE /* libPods-WhatsOnTap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhatsOnTap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C672FBA71D108FFF0046A932 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		C672FBA81D108FFF0046A932 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		C672FBA91D108FFF0046A932 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		C672FBAA1D108FFF0046A932 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		C672FBAB1D108FFF0046A932 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		C672FBAC1D108FFF0046A932 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		E5117687E1040A6F6D3479B3 /* Pods-WhatsOnTap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsOnTap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsOnTap/Pods-WhatsOnTap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +113,12 @@
 		431C61FF1D1045A5008D0249 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C672FBA71D108FFF0046A932 /* FeedViewController.h */,
+				C672FBA81D108FFF0046A932 /* FeedViewController.m */,
+				C672FBA91D108FFF0046A932 /* SearchViewController.h */,
+				C672FBAA1D108FFF0046A932 /* SearchViewController.m */,
+				C672FBAB1D108FFF0046A932 /* UserViewController.h */,
+				C672FBAC1D108FFF0046A932 /* UserViewController.m */,
 				431C62001D104D45008D0249 /* LoginViewController.h */,
 				431C62011D104D45008D0249 /* LoginViewController.m */,
 			);
@@ -249,9 +264,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C672FBAF1D108FFF0046A932 /* UserViewController.m in Sources */,
 				431C61FD1D104595008D0249 /* User.m in Sources */,
+				C672FBAD1D108FFF0046A932 /* FeedViewController.m in Sources */,
 				431956D11D0F4370000EC3F5 /* AppDelegate.m in Sources */,
 				431956CE1D0F4370000EC3F5 /* main.m in Sources */,
+				C672FBAE1D108FFF0046A932 /* SearchViewController.m in Sources */,
 				431C62021D104D45008D0249 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
