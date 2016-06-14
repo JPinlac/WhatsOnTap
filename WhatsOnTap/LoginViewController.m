@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "User.h"
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface LoginViewController ()
 
@@ -29,12 +30,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)loginButton:	(FBSDKLoginButton *)loginButton
-didCompleteWithResult:	(FBSDKLoginManagerLoginResult *)result
-              error:	(NSError *)error{
-    NSLog(@"HI");
+- (void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result error:(NSError *)error{
     [[User getUser]initUser:result];
-    NSLog(@"%@", [User getUser].token);
+    NSLog(@"%@", [[User getUser] token]);
 }
 
 - (void) loginButtonDidLogOut:(FBSDKLoginButton *)loginButton{
