@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface User : NSObject
 
+@property NSString *username;
+@property FBSDKAccessToken *token;
+@property UIImage *profilePicture;
+@property NSMutableArray *starredBeers;
+
++ (instancetype)getUser;
 @end

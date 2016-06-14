@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		431956CE1D0F4370000EC3F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 431956CD1D0F4370000EC3F5 /* main.m */; };
 		431956D11D0F4370000EC3F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 431956D01D0F4370000EC3F5 /* AppDelegate.m */; };
-		431956D41D0F4370000EC3F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431956D31D0F4370000EC3F5 /* ViewController.m */; };
 		431956D71D0F4370000EC3F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431956D51D0F4370000EC3F5 /* Main.storyboard */; };
 		431956D91D0F4370000EC3F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431956D81D0F4370000EC3F5 /* Assets.xcassets */; };
 		431956DC1D0F4370000EC3F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431956DA1D0F4370000EC3F5 /* LaunchScreen.storyboard */; };
 		431C61FD1D104595008D0249 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C61FC1D104595008D0249 /* User.m */; };
+		431C62021D104D45008D0249 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C62011D104D45008D0249 /* LoginViewController.m */; };
 		CAEDB7F515B954F3993C48A8 /* libPods-WhatsOnTap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0560FBEE0B7B86DE28141AE /* libPods-WhatsOnTap.a */; };
 /* End PBXBuildFile section */
 
@@ -22,14 +22,14 @@
 		431956CD1D0F4370000EC3F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		431956CF1D0F4370000EC3F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		431956D01D0F4370000EC3F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		431956D21D0F4370000EC3F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		431956D31D0F4370000EC3F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		431956D61D0F4370000EC3F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		431956D81D0F4370000EC3F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		431956DB1D0F4370000EC3F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		431956DD1D0F4370000EC3F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431C61FB1D104595008D0249 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
 		431C61FC1D104595008D0249 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
+		431C62001D104D45008D0249 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		431C62011D104D45008D0249 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		606BB14BE681ED86A04A91FB /* Pods-WhatsOnTap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsOnTap.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsOnTap/Pods-WhatsOnTap.release.xcconfig"; sourceTree = "<group>"; };
 		A0560FBEE0B7B86DE28141AE /* libPods-WhatsOnTap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhatsOnTap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5117687E1040A6F6D3479B3 /* Pods-WhatsOnTap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsOnTap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsOnTap/Pods-WhatsOnTap.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,8 +101,8 @@
 		431C61FF1D1045A5008D0249 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				431956D21D0F4370000EC3F5 /* ViewController.h */,
-				431956D31D0F4370000EC3F5 /* ViewController.m */,
+				431C62001D104D45008D0249 /* LoginViewController.h */,
+				431C62011D104D45008D0249 /* LoginViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -246,9 +246,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				431C61FD1D104595008D0249 /* User.m in Sources */,
-				431956D41D0F4370000EC3F5 /* ViewController.m in Sources */,
 				431956D11D0F4370000EC3F5 /* AppDelegate.m in Sources */,
 				431956CE1D0F4370000EC3F5 /* main.m in Sources */,
+				431C62021D104D45008D0249 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

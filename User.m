@@ -10,4 +10,15 @@
 
 @implementation User
 
++ (User *)getUser {
+    static User *curentUser = nil;
+    static dispatch_once_t onePredicate;
+    
+    dispatch_once(&onePredicate, ^ {
+        curentUser = [[User alloc]init];
+    });
+    
+    return curentUser;
+}
+
 @end
