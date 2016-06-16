@@ -14,6 +14,8 @@
 		431956DC1D0F4370000EC3F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431956DA1D0F4370000EC3F5 /* LaunchScreen.storyboard */; };
 		431C61FD1D104595008D0249 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C61FC1D104595008D0249 /* User.m */; };
 		431C62021D104D45008D0249 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C62011D104D45008D0249 /* LoginViewController.m */; };
+		4377C7A91D13175000AAC885 /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4377C7A81D13175000AAC885 /* Beer.m */; };
+		4377C7AC1D131A1100AAC885 /* Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 4377C7AB1D131A1100AAC885 /* Update.m */; };
 		94640F791D0F47610035A2DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94640F781D0F47610035A2DE /* GoogleService-Info.plist */; };
 		C672FBAD1D108FFF0046A932 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C672FBA81D108FFF0046A932 /* FeedViewController.m */; };
 		C672FBAE1D108FFF0046A932 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C672FBAA1D108FFF0046A932 /* SearchViewController.m */; };
@@ -43,6 +45,10 @@
 		431C61FC1D104595008D0249 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
 		431C62001D104D45008D0249 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		431C62011D104D45008D0249 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4377C7A71D13175000AAC885 /* Beer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beer.h; sourceTree = "<group>"; };
+		4377C7A81D13175000AAC885 /* Beer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beer.m; sourceTree = "<group>"; };
+		4377C7AA1D131A1100AAC885 /* Update.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Update.h; sourceTree = "<group>"; };
+		4377C7AB1D131A1100AAC885 /* Update.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Update.m; sourceTree = "<group>"; };
 		606BB14BE681ED86A04A91FB /* Pods-WhatsOnTap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsOnTap.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsOnTap/Pods-WhatsOnTap.release.xcconfig"; sourceTree = "<group>"; };
 		94640F781D0F47610035A2DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0560FBEE0B7B86DE28141AE /* libPods-WhatsOnTap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhatsOnTap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,9 +137,13 @@
 		431C61FE1D10459E008D0249 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				431C61FB1D104595008D0249 /* User.h */,
+				4377C7A71D13175000AAC885 /* Beer.h */,
+				4377C7A81D13175000AAC885 /* Beer.m */,
+				4377C7AA1D131A1100AAC885 /* Update.h */,
+				4377C7AB1D131A1100AAC885 /* Update.m */,
 				C672FBB01D109C960046A932 /* Establishment.h */,
 				C672FBB11D109C960046A932 /* Establishment.m */,
+				431C61FB1D104595008D0249 /* User.h */,
 				431C61FC1D104595008D0249 /* User.m */,
 			);
 			name = Models;
@@ -301,9 +311,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4377C7AC1D131A1100AAC885 /* Update.m in Sources */,
 				C672FBAF1D108FFF0046A932 /* UserViewController.m in Sources */,
 				431C61FD1D104595008D0249 /* User.m in Sources */,
 				C672FBAD1D108FFF0046A932 /* FeedViewController.m in Sources */,
+				4377C7A91D13175000AAC885 /* Beer.m in Sources */,
 				431956D11D0F4370000EC3F5 /* AppDelegate.m in Sources */,
 				431956CE1D0F4370000EC3F5 /* main.m in Sources */,
 				C672FBB21D109C960046A932 /* Establishment.m in Sources */,

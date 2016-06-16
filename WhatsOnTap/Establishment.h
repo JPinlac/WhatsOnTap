@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface Establishment : NSObject
-@property (strong, nonatomic) NSString *EstablishmentName;
-@property (strong, nonatomic) NSString *tapList;
+@property (strong, nonatomic) NSString *uid;
+@property (strong, nonatomic) NSString *establishmentName;
+@property (strong, nonatomic) NSString *location;
+@property (strong, nonatomic) NSMutableArray *beers;
 
 
 @end
