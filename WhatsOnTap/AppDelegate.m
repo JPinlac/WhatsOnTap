@@ -30,10 +30,25 @@
     [FIRApp configure];
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
+
     //shows login screen if facebook session isn't active
     if(![FBSDKAccessToken currentAccessToken]) {
         [self showLoginScreen:NO];
     }
+    
+    // Assign tab bar item with titles
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    UITabBar *tabBar = tabBarController.tabBar;
+    UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
+    
+    
+    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"home.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"home.png"]];
+   
+    
+    //change the tab bar background color
+    UIImage* tabBarBackground = [UIImage imageNamed:@"tabbar.png"];
+    [[UITabBar appearance] setBackgroundImage:tabBarBackground];
+    [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"tabbar_selected.png"]];
     
     return YES;
 }
