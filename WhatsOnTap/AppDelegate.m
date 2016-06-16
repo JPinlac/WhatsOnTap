@@ -9,8 +9,8 @@
 #import "AppDelegate.h"
 @import Firebase;
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
-
-
+#import "User.h"
+#import "LoginViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -28,7 +28,23 @@
     [FIRApp configure];
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
+    if([User getUser].token == NULL) {
+        [self showLoginScreen:NO];
+    }
+    
     return YES;
+}
+
+-(void) showLoginScreen:(BOOL)animated
+{
+    
+    // Get login screen from storyboard and present it
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    LoginViewController *viewController = (LoginViewController *)[storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    [self.window makeKeyAndVisible];
+    [self.window.rootViewController presentViewController:viewController
+                                                 animated:animated
+                                               completion:nil];
 }
 
 - (BOOL)application:(UIApplication *)application
