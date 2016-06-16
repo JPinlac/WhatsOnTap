@@ -9,8 +9,10 @@
 #import "AppDelegate.h"
 @import Firebase;
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKAccessToken.h>
 #import "User.h"
 #import "LoginViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -28,7 +30,8 @@
     [FIRApp configure];
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
-    if([User getUser].token == NULL) {
+    //shows login screen if facebook session isn't active
+    if(![FBSDKAccessToken currentAccessToken]) {
         [self showLoginScreen:NO];
     }
     
