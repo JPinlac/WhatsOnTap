@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 #import "User.h"
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
-
+#import <FBSDKAccessToken.h>
 @interface LoginViewController ()
 
 @end
@@ -24,6 +24,17 @@
     loginButton.center = self.view.center;
     loginButton.delegate = self;
     [self.view addSubview:loginButton];
+     NSLog(@"%@", [FBSDKAccessToken currentAccessToken]);
+    if([FBSDKAccessToken currentAccessToken] != NULL)
+    {
+        NSLog(@"DISMISSING SHIT");
+//        [self dismissShit];
+//        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+- (void)dismissShit{
+//    sleep(10);
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,8 +42,10 @@
     // Dispose of any resources that can be recreated.
 }
 - (void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result error:(NSError *)error{
-    [[User getUser]initUser:result];
+//    [FBSDKAccessToken ]
+    [[User getUser]setFBToken:result];
     NSLog(@"%@", [[User getUser] token]);
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void) loginButtonDidLogOut:(FBSDKLoginButton *)loginButton{
