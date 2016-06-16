@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 @import Firebase;
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
-
+@import GoogleMaps;
 
 @interface AppDelegate ()
 
@@ -42,7 +42,7 @@
     [[UITabBar appearance] setBackgroundImage:tabBarBackground];
     [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"tabbar_selected.png"]];
  
-    
+    [GMSServices provideAPIKey:@"AIzaSyCaf1ohnTgFS2ooVrWjA0qmaX-rMbyHhLs"];
     return YES;
 }
 

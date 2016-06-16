@@ -7,7 +7,7 @@
 //
 
 #import "SearchViewController.h"
-
+#import "GMSPlacesClientViewController.h"
 @interface SearchViewController ()
 
 @end
