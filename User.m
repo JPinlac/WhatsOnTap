@@ -21,8 +21,7 @@
     return curentUser;
 }
 
-- (id)initUser:(FBSDKLoginManagerLoginResult *)result{
+- (void)setFBToken:(FBSDKLoginManagerLoginResult *)result{
     self.token = result.token;
-    return self;
 }
 @end
