@@ -9,7 +9,9 @@
 #import "AppDelegate.h"
 @import Firebase;
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
-@import GoogleMaps;
+#import <FBSDKAccessToken.h>
+#import "User.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -28,6 +30,12 @@
     [FIRApp configure];
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
+
+    //shows login screen if facebook session isn't active
+    if(![FBSDKAccessToken currentAccessToken]) {
+        [self showLoginScreen:NO];
+    }
+    
     // Assign tab bar item with titles
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     UITabBar *tabBar = tabBarController.tabBar;
@@ -42,8 +50,20 @@
     [[UITabBar appearance] setBackgroundImage:tabBarBackground];
     [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"tabbar_selected.png"]];
  
-    [GMSServices provideAPIKey:@"AIzaSyCaf1ohnTgFS2ooVrWjA0qmaX-rMbyHhLs"];
+    
     return YES;
+}
+
+-(void) showLoginScreen:(BOOL)animated
+{
+    
+    // Get login screen from storyboard and present it
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    LoginViewController *viewController = (LoginViewController *)[storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    [self.window makeKeyAndVisible];
+    [self.window.rootViewController presentViewController:viewController
+                                                 animated:animated
+                                               completion:nil];
 }
 
 - (BOOL)application:(UIApplication *)application
