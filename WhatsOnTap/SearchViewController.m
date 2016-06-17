@@ -35,7 +35,5 @@
 */
 - (IBAction)getEstablishmentBtnClicked:(id)sender {
 }
-- (IBAction)getEstablishmentBtnClicked:(id)sender {
-}
 
 @end

@@ -12,6 +12,7 @@
 #import <FBSDKAccessToken.h>
 #import "User.h"
 #import "LoginViewController.h"
+@import GoogleMaps;
 
 @interface AppDelegate ()
 
@@ -49,6 +50,10 @@
     UIImage* tabBarBackground = [UIImage imageNamed:@"tabbar.png"];
     [[UITabBar appearance] setBackgroundImage:tabBarBackground];
     [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"tabbar_selected.png"]];
+    
+    NSDictionary *dictionaryRoot = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"GMaps" ofType:@"plist"]];
+    NSLog(@"%@", [dictionaryRoot objectForKey:@"GOOGLE_MAPS_API_KEY"]);
+    [GMSServices provideAPIKey:[dictionaryRoot objectForKey:@"GOOGLE_MAPS_API_KEY"]];
  
     
     return YES;
