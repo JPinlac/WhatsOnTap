@@ -16,6 +16,7 @@
 		431C62021D104D45008D0249 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C62011D104D45008D0249 /* LoginViewController.m */; };
 		4377C7A91D13175000AAC885 /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4377C7A81D13175000AAC885 /* Beer.m */; };
 		4377C7AC1D131A1100AAC885 /* Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 4377C7AB1D131A1100AAC885 /* Update.m */; };
+		941CF2171D1436EE0091A39A /* GMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 941CF2161D1436EE0091A39A /* GMaps.plist */; };
 		94640F791D0F47610035A2DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94640F781D0F47610035A2DE /* GoogleService-Info.plist */; };
 		C672FBAD1D108FFF0046A932 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C672FBA81D108FFF0046A932 /* FeedViewController.m */; };
 		C672FBAE1D108FFF0046A932 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C672FBAA1D108FFF0046A932 /* SearchViewController.m */; };
@@ -50,6 +51,7 @@
 		4377C7AA1D131A1100AAC885 /* Update.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Update.h; sourceTree = "<group>"; };
 		4377C7AB1D131A1100AAC885 /* Update.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Update.m; sourceTree = "<group>"; };
 		606BB14BE681ED86A04A91FB /* Pods-WhatsOnTap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsOnTap.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsOnTap/Pods-WhatsOnTap.release.xcconfig"; sourceTree = "<group>"; };
+		941CF2161D1436EE0091A39A /* GMaps.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GMaps.plist; sourceTree = "<group>"; };
 		94640F781D0F47610035A2DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0560FBEE0B7B86DE28141AE /* libPods-WhatsOnTap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhatsOnTap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C672FBA71D108FFF0046A932 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				431956DA1D0F4370000EC3F5 /* LaunchScreen.storyboard */,
 				431956DD1D0F4370000EC3F5 /* Info.plist */,
 				94640F781D0F47610035A2DE /* GoogleService-Info.plist */,
+				941CF2161D1436EE0091A39A /* GMaps.plist */,
 				431956CC1D0F4370000EC3F5 /* Supporting Files */,
 			);
 			path = WhatsOnTap;
@@ -248,6 +251,7 @@
 				C69FE5591D116B20006F281F /* home@2x.png in Resources */,
 				94640F791D0F47610035A2DE /* GoogleService-Info.plist in Resources */,
 				C69FE5581D116B20006F281F /* home.png in Resources */,
+				941CF2171D1436EE0091A39A /* GMaps.plist in Resources */,
 				431956D91D0F4370000EC3F5 /* Assets.xcassets in Resources */,
 				C69FE5561D116B20006F281F /* home_selected.png in Resources */,
 				C69FE5571D116B20006F281F /* home_selected@2x.png in Resources */,

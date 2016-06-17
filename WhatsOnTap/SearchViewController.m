@@ -33,5 +33,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)getEstablishmentBtnClicked:(id)sender {
+}
 
 @end

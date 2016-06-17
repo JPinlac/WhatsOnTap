@@ -10,4 +10,8 @@ target 'WhatsOnTap' do
   pod 'FBSDKLoginKit', '~> 4.9'
   pod 'Firebase'
 
+  pod 'GoogleMaps'
+
 end
+
+
