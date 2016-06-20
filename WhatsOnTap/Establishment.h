@@ -14,5 +14,4 @@
 @property (strong, nonatomic) NSString *location;
 @property (strong, nonatomic) NSMutableArray *beers;
 
-
 @end

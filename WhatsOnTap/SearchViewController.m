@@ -7,7 +7,7 @@
 //
 
 #import "SearchViewController.h"
-
+#import "GooglePlacesClientViewController.h"
 @interface SearchViewController ()
 
 @end
@@ -15,13 +15,29 @@
 @implementation SearchViewController
 
 - (void)viewDidLoad {
+    [self setcurrentlocationVC];
     [super viewDidLoad];
+    NSLog(@"googlePlaceName: %@", _googlePlaceName);
+    NSLog(@"googlePlaceLocation: %@", _googlePlaceLocation);
+    
+    
+    
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)setcurrentlocationVC{
+    
+    _googlePlacesNameLabel.text = _googlePlaceName;
+    _googlePlacesLocationLabel.text =_googlePlaceLocation;
+    _googlePlacesNearbyNameLabel.text = _googlePlaceNearbyName;
+    _googlePlacesNearbyLocationLabel.text =_googlePlaceNearbyLocation;
+    
 }
 
 /*
@@ -33,7 +49,6 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (IBAction)getEstablishmentBtnClicked:(id)sender {
-}
+
 
 @end
