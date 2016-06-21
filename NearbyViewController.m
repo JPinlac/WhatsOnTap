@@ -31,7 +31,6 @@
 -(void)setnearbyLocationVC{
     
     _nearbyNameLabel.text = _googlePlaceNearbyName;
-    _nearbyLocationLabel.text =_googlePlaceNearbyLocation;
     
 }
 

@@ -90,8 +90,7 @@
                                        componentsSeparatedByString:@", "] componentsJoinedByString:@"\n"];
          
             _nearbyName= place.name;
-            _nearbyLocation = [[place.formattedAddress
-                                componentsSeparatedByString:@", "] componentsJoinedByString:@"\n"];
+            _nearbyLocation = place.coordinate;
            
             
           //  _nearbyLocation = place.formattedAddress;
