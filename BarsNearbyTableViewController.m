@@ -11,6 +11,7 @@
 @import GoogleMaps;
 #import "EstablishmentDetailViewController.h"
 
+
 @interface BarsNearbyTableViewController ()
 @property(nonatomic, strong) IBOutlet UITableView *tableView;
 @property(nonatomic) NSMutableArray *establishmentsArray;
@@ -22,7 +23,10 @@
 }
 
 - (void)viewDidLoad {
+    [self listEstablishments];
     [super viewDidLoad];
+    NSLog(@"Establi: %@",_establishmentsArray);
+
     [self getCurrentInfo];
     
 
@@ -59,16 +63,46 @@
 }
 
 
+- (IBAction)addEstablishmentBarButton:(UIBarButtonItem *)sender {
+    [self Establishments];
+}
+
+-(void) Establishments {
+    FIRDatabaseReference *ref = [[FIRDatabase database] reference];
+    FIRDatabaseReference *establishmentRef = [ref child:@"establishments"].childByAutoId;
+ //   NSLog(@"%@",establishmentRef.key);
+    
+    NSDictionary *newEstablishmentInfo = [NSDictionary dictionaryWithObjectsAndKeys:@"HopCat", @"establishment_name", @"elocation", @"location", nil];
+    [establishmentRef setValue:newEstablishmentInfo];
+    
+}
+
+
+-(void)listEstablishments {
+    _establishmentsArray = [[NSMutableArray alloc]init];
+    FIRDatabaseReference *ref = [[FIRDatabase database] reference];
+    FIRDatabaseReference *establishmentRef = [ref child:@"establishments"];
+    
+    [establishmentRef observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot *snapshot) {
+        for (FIRDataSnapshot *child in snapshot.children) {
+            if ([child.key isEqualToString:@"establishment_name"]) {
+                [_establishmentsArray addObject:child.value];
+            }
+        }
+        NSLog(@"establishment: %@",_establishmentsArray.description);
+        [self.tableView reloadData];
+    }];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 5;
+    NSLog(@"%lu", [_establishmentsArray count]);
+    return [_establishmentArray count];
 }
 
 
@@ -76,9 +110,14 @@
  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"establishmentCell" forIndexPath:indexPath];
  
  // Configure the cell...
+     UIImage *image1 = [UIImage imageNamed:@"beer-icon"];
+     cell.imageView.image = image1;
+     
+     cell.textLabel.text = [_establishmentArray objectAtIndex:indexPath.row];
+     
+     return cell;
  
- return cell;
- }
+}
  
 
 /*

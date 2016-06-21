@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "Establishment.h"
+@import Firebase;
 
-@interface BarsNearbyTableViewController : UIViewController
+@interface BarsNearbyTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic) CLLocationCoordinate2D currentLocation;
 @property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) NSMutableArray *establishmentArray;
 @end

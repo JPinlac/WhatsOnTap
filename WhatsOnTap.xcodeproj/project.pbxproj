@@ -18,6 +18,7 @@
 		43C56D6E1D19CC9700C56ECC /* EstablishmentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C56D6D1D19CC9700C56ECC /* EstablishmentDetailViewController.m */; };
 		941CF2171D1436EE0091A39A /* GMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 941CF2161D1436EE0091A39A /* GMaps.plist */; };
 		94640F791D0F47610035A2DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94640F781D0F47610035A2DE /* GoogleService-Info.plist */; };
+		B8E77E9D1D19D5D200B7F1EF /* beer-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E77E9C1D19D5D200B7F1EF /* beer-icon.png */; };
 		C61478FB1D143F1300C94314 /* GooglePlacesClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C61478FA1D143F1300C94314 /* GooglePlacesClientViewController.m */; };
 		C61478FE1D186B1700C94314 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61478FC1D186B1700C94314 /* Main.storyboard */; };
 		C61479011D186C5A00C94314 /* NearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C61479001D186C5A00C94314 /* NearbyViewController.m */; };
@@ -59,6 +60,7 @@
 		941CF2161D1436EE0091A39A /* GMaps.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GMaps.plist; sourceTree = "<group>"; };
 		94640F781D0F47610035A2DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0560FBEE0B7B86DE28141AE /* libPods-WhatsOnTap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhatsOnTap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E77E9C1D19D5D200B7F1EF /* beer-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beer-icon.png"; sourceTree = "<group>"; };
 		C61478F91D143F1300C94314 /* GooglePlacesClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GooglePlacesClientViewController.h; path = WhatsOnTap/GooglePlacesClientViewController.h; sourceTree = "<group>"; };
 		C61478FA1D143F1300C94314 /* GooglePlacesClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GooglePlacesClientViewController.m; path = WhatsOnTap/GooglePlacesClientViewController.m; sourceTree = "<group>"; };
 		C61478FD1D186B1700C94314 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = WhatsOnTap/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		431956CC1D0F4370000EC3F5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B8E77E9C1D19D5D200B7F1EF /* beer-icon.png */,
 				C69FE5421D116B20006F281F /* home_selected.png */,
 				C69FE5431D116B20006F281F /* home_selected@2x.png */,
 				C69FE5441D116B20006F281F /* home.png */,
@@ -272,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E77E9D1D19D5D200B7F1EF /* beer-icon.png in Resources */,
 				C69FE5661D116B20006F281F /* tabbar_selected.png in Resources */,
 				C69FE5681D116B20006F281F /* tabbar.png in Resources */,
 				431956DC1D0F4370000EC3F5 /* LaunchScreen.storyboard in Resources */,
