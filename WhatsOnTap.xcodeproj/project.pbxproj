@@ -20,6 +20,7 @@
 		C61478FB1D143F1300C94314 /* GooglePlacesClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C61478FA1D143F1300C94314 /* GooglePlacesClientViewController.m */; };
 		C61478FE1D186B1700C94314 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61478FC1D186B1700C94314 /* Main.storyboard */; };
 		C61479011D186C5A00C94314 /* NearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C61479001D186C5A00C94314 /* NearbyViewController.m */; };
+		C61479041D19C36B00C94314 /* BarsNearbyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C61479031D19C36B00C94314 /* BarsNearbyTableViewController.m */; };
 		C672FBAD1D108FFF0046A932 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C672FBA81D108FFF0046A932 /* FeedViewController.m */; };
 		C672FBAE1D108FFF0046A932 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C672FBAA1D108FFF0046A932 /* SearchViewController.m */; };
 		C672FBAF1D108FFF0046A932 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C672FBAC1D108FFF0046A932 /* UserViewController.m */; };
@@ -60,6 +61,8 @@
 		C61478FD1D186B1700C94314 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = WhatsOnTap/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C61478FF1D186C5A00C94314 /* NearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NearbyViewController.h; path = ../NearbyViewController.h; sourceTree = "<group>"; };
 		C61479001D186C5A00C94314 /* NearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NearbyViewController.m; path = ../NearbyViewController.m; sourceTree = "<group>"; };
+		C61479021D19C36B00C94314 /* BarsNearbyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarsNearbyTableViewController.h; sourceTree = "<group>"; };
+		C61479031D19C36B00C94314 /* BarsNearbyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarsNearbyTableViewController.m; sourceTree = "<group>"; };
 		C672FBA71D108FFF0046A932 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		C672FBA81D108FFF0046A932 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		C672FBA91D108FFF0046A932 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				C61478FC1D186B1700C94314 /* Main.storyboard */,
+				C61479021D19C36B00C94314 /* BarsNearbyTableViewController.h */,
+				C61479031D19C36B00C94314 /* BarsNearbyTableViewController.m */,
 				431956CB1D0F4370000EC3F5 /* WhatsOnTap */,
 				431956CA1D0F4370000EC3F5 /* Products */,
 				6F9DE820D72EB0B96FFC6519 /* Pods */,
@@ -335,6 +340,7 @@
 				C672FBB21D109C960046A932 /* Establishment.m in Sources */,
 				C672FBAE1D108FFF0046A932 /* SearchViewController.m in Sources */,
 				C61479011D186C5A00C94314 /* NearbyViewController.m in Sources */,
+				C61479041D19C36B00C94314 /* BarsNearbyTableViewController.m in Sources */,
 				C61478FB1D143F1300C94314 /* GooglePlacesClientViewController.m in Sources */,
 				431C62021D104D45008D0249 /* LoginViewController.m in Sources */,
 			);
