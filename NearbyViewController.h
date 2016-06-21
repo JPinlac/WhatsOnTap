@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+
 
 @interface NearbyViewController : UIViewController
 
 @property (strong, nonatomic) NSString *googlePlaceNearbyName;
-@property (strong, nonatomic) NSString *googlePlaceNearbyLocation;
-
+@property (nonatomic) CLLocationCoordinate2D googlePlaceNearbyLocation;
 
 @property (weak, nonatomic) IBOutlet UILabel *nearbyNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nearbyLocationLabel;
