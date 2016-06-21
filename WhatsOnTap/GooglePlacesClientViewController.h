@@ -17,5 +17,5 @@
 
 @property (strong, nonatomic) NSString *nearbyName;
 @property (nonatomic) CLLocationCoordinate2D nearbyLocation;
-@property (strong, nonatomic) NSString *nearbyTypes;
+
 @end
