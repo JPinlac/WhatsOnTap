@@ -15,6 +15,7 @@
 		431C62021D104D45008D0249 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C62011D104D45008D0249 /* LoginViewController.m */; };
 		4377C7A91D13175000AAC885 /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4377C7A81D13175000AAC885 /* Beer.m */; };
 		4377C7AC1D131A1100AAC885 /* Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 4377C7AB1D131A1100AAC885 /* Update.m */; };
+		43C56D6E1D19CC9700C56ECC /* EstablishmentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C56D6D1D19CC9700C56ECC /* EstablishmentDetailViewController.m */; };
 		941CF2171D1436EE0091A39A /* GMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 941CF2161D1436EE0091A39A /* GMaps.plist */; };
 		94640F791D0F47610035A2DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94640F781D0F47610035A2DE /* GoogleService-Info.plist */; };
 		C61478FB1D143F1300C94314 /* GooglePlacesClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C61478FA1D143F1300C94314 /* GooglePlacesClientViewController.m */; };
@@ -52,21 +53,23 @@
 		4377C7A81D13175000AAC885 /* Beer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beer.m; sourceTree = "<group>"; };
 		4377C7AA1D131A1100AAC885 /* Update.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Update.h; sourceTree = "<group>"; };
 		4377C7AB1D131A1100AAC885 /* Update.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Update.m; sourceTree = "<group>"; };
+		43C56D6C1D19CC9700C56ECC /* EstablishmentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EstablishmentDetailViewController.h; path = ../EstablishmentDetailViewController.h; sourceTree = "<group>"; };
+		43C56D6D1D19CC9700C56ECC /* EstablishmentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EstablishmentDetailViewController.m; path = ../EstablishmentDetailViewController.m; sourceTree = "<group>"; };
 		606BB14BE681ED86A04A91FB /* Pods-WhatsOnTap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsOnTap.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsOnTap/Pods-WhatsOnTap.release.xcconfig"; sourceTree = "<group>"; };
 		941CF2161D1436EE0091A39A /* GMaps.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GMaps.plist; sourceTree = "<group>"; };
 		94640F781D0F47610035A2DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0560FBEE0B7B86DE28141AE /* libPods-WhatsOnTap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhatsOnTap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C61478F91D143F1300C94314 /* GooglePlacesClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlacesClientViewController.h; sourceTree = "<group>"; };
-		C61478FA1D143F1300C94314 /* GooglePlacesClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesClientViewController.m; sourceTree = "<group>"; };
+		C61478F91D143F1300C94314 /* GooglePlacesClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GooglePlacesClientViewController.h; path = WhatsOnTap/GooglePlacesClientViewController.h; sourceTree = "<group>"; };
+		C61478FA1D143F1300C94314 /* GooglePlacesClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GooglePlacesClientViewController.m; path = WhatsOnTap/GooglePlacesClientViewController.m; sourceTree = "<group>"; };
 		C61478FD1D186B1700C94314 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = WhatsOnTap/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C61478FF1D186C5A00C94314 /* NearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NearbyViewController.h; path = ../NearbyViewController.h; sourceTree = "<group>"; };
-		C61479001D186C5A00C94314 /* NearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NearbyViewController.m; path = ../NearbyViewController.m; sourceTree = "<group>"; };
-		C61479021D19C36B00C94314 /* BarsNearbyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarsNearbyTableViewController.h; sourceTree = "<group>"; };
-		C61479031D19C36B00C94314 /* BarsNearbyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarsNearbyTableViewController.m; sourceTree = "<group>"; };
+		C61478FF1D186C5A00C94314 /* NearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyViewController.h; sourceTree = "<group>"; };
+		C61479001D186C5A00C94314 /* NearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyViewController.m; sourceTree = "<group>"; };
+		C61479021D19C36B00C94314 /* BarsNearbyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarsNearbyTableViewController.h; path = ../BarsNearbyTableViewController.h; sourceTree = "<group>"; };
+		C61479031D19C36B00C94314 /* BarsNearbyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarsNearbyTableViewController.m; path = ../BarsNearbyTableViewController.m; sourceTree = "<group>"; };
 		C672FBA71D108FFF0046A932 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		C672FBA81D108FFF0046A932 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
-		C672FBA91D108FFF0046A932 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		C672FBAA1D108FFF0046A932 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		C672FBA91D108FFF0046A932 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = WhatsOnTap/SearchViewController.h; sourceTree = "<group>"; };
+		C672FBAA1D108FFF0046A932 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = WhatsOnTap/SearchViewController.m; sourceTree = "<group>"; };
 		C672FBAB1D108FFF0046A932 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		C672FBAC1D108FFF0046A932 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		C672FBB01D109C960046A932 /* Establishment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Establishment.h; sourceTree = "<group>"; };
@@ -98,8 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				C61478FC1D186B1700C94314 /* Main.storyboard */,
-				C61479021D19C36B00C94314 /* BarsNearbyTableViewController.h */,
-				C61479031D19C36B00C94314 /* BarsNearbyTableViewController.m */,
+				43C56D6F1D19CCAD00C56ECC /* Obsolete */,
 				431956CB1D0F4370000EC3F5 /* WhatsOnTap */,
 				431956CA1D0F4370000EC3F5 /* Products */,
 				6F9DE820D72EB0B96FFC6519 /* Pods */,
@@ -166,20 +168,31 @@
 		431C61FF1D1045A5008D0249 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C61478FF1D186C5A00C94314 /* NearbyViewController.h */,
-				C61479001D186C5A00C94314 /* NearbyViewController.m */,
+				C61479021D19C36B00C94314 /* BarsNearbyTableViewController.h */,
+				C61479031D19C36B00C94314 /* BarsNearbyTableViewController.m */,
+				43C56D6C1D19CC9700C56ECC /* EstablishmentDetailViewController.h */,
+				43C56D6D1D19CC9700C56ECC /* EstablishmentDetailViewController.m */,
 				C672FBA71D108FFF0046A932 /* FeedViewController.h */,
 				C672FBA81D108FFF0046A932 /* FeedViewController.m */,
-				C672FBA91D108FFF0046A932 /* SearchViewController.h */,
-				C61478F91D143F1300C94314 /* GooglePlacesClientViewController.h */,
-				C61478FA1D143F1300C94314 /* GooglePlacesClientViewController.m */,
-				C672FBAA1D108FFF0046A932 /* SearchViewController.m */,
 				C672FBAB1D108FFF0046A932 /* UserViewController.h */,
 				C672FBAC1D108FFF0046A932 /* UserViewController.m */,
 				431C62001D104D45008D0249 /* LoginViewController.h */,
 				431C62011D104D45008D0249 /* LoginViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		43C56D6F1D19CCAD00C56ECC /* Obsolete */ = {
+			isa = PBXGroup;
+			children = (
+				C61478FF1D186C5A00C94314 /* NearbyViewController.h */,
+				C61479001D186C5A00C94314 /* NearbyViewController.m */,
+				C672FBA91D108FFF0046A932 /* SearchViewController.h */,
+				C672FBAA1D108FFF0046A932 /* SearchViewController.m */,
+				C61478FA1D143F1300C94314 /* GooglePlacesClientViewController.m */,
+				C61478F91D143F1300C94314 /* GooglePlacesClientViewController.h */,
+			);
+			name = Obsolete;
 			sourceTree = "<group>";
 		};
 		6F9DE820D72EB0B96FFC6519 /* Pods */ = {
@@ -333,6 +346,7 @@
 				4377C7AC1D131A1100AAC885 /* Update.m in Sources */,
 				C672FBAF1D108FFF0046A932 /* UserViewController.m in Sources */,
 				431C61FD1D104595008D0249 /* User.m in Sources */,
+				43C56D6E1D19CC9700C56ECC /* EstablishmentDetailViewController.m in Sources */,
 				C672FBAD1D108FFF0046A932 /* FeedViewController.m in Sources */,
 				4377C7A91D13175000AAC885 /* Beer.m in Sources */,
 				431956D11D0F4370000EC3F5 /* AppDelegate.m in Sources */,

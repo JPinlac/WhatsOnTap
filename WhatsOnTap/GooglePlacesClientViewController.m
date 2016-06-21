@@ -91,11 +91,7 @@
          
             _nearbyName= place.name;
             _nearbyLocation = place.coordinate;
-           
-            
-          //  _nearbyLocation = place.formattedAddress;
-           // _nearbyTypes=place.types;
-            
+
             
             Establishment *newEstablishment =[[Establishment alloc]init];
             newEstablishment.establishmentName = _nearbyName;
