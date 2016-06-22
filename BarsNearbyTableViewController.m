@@ -12,7 +12,6 @@
 #import "EstablishmentDetailViewController.h"
 @import Firebase;
 @import FirebaseDatabase;
-//@import MapKit;
 
 @interface BarsNearbyTableViewController ()
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
@@ -127,7 +126,7 @@
          Establishment *establishmentInCell = [_establishmentsArray objectAtIndex:indexPath.row];
         cell.textLabel.text = establishmentInCell.establishmentName;
      } else {
-         Establishment *establishmentInCell = [_establishmentsArray objectAtIndex:indexPath.row];
+         Establishment *establishmentInCell = [_searchEstablishmentsArray objectAtIndex:indexPath.row];
          cell.textLabel.text = establishmentInCell.establishmentName;
      }
  
@@ -141,20 +140,17 @@
     
     [establishmentsRef observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot *snapshot) {
         for (FIRDataSnapshot *child in snapshot.children) {
-//            NSLog(@"Snapshot Key: %@", snapshot.key);
             Establishment *newEstablishment = [[Establishment alloc] init];
             newEstablishment.uid = snapshot.key;
             if ([child.key isEqualToString:@"establishment_name"]) {
                 newEstablishment.establishmentName = child.value;
             } else if ([child.key isEqualToString:@"location"]){
                 NSArray *items = [child.value componentsSeparatedByString:@","];
-//                NSLog(@"%@", items.description);
                 float latitude =[[items objectAtIndex:0] floatValue];
                 float longitude =[[items objectAtIndex:1] floatValue];
                 newEstablishment.location = CLLocationCoordinate2DMake(latitude, longitude);
             }
             [_establishmentsArray addObject:newEstablishment];
-//            NSLog(@"%@",_establishmentsArray.description);
         }
         [self.tableView reloadData];
     }];
@@ -162,9 +158,8 @@
 }
 
 - (IBAction)searchEstablishmentButton:(UIButton *)sender {
-//    [self searchEstablishments];
-    NSLog(@"%@",_establishmentsArray.description);
-//    NSLog(@"Search results: %@", _searchEstablishmentsArray.description);
+    [self searchEstablishments];
+    NSLog(@"Search results: %@", _searchEstablishmentsArray.description);
     [self.tableView reloadData];
 }
 
