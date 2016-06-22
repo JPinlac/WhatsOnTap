@@ -24,6 +24,9 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)addBeerButtonPressed:(id)sender {
+    _beerToBeAdded = [[Beer alloc] init];
+    _beerToBeAdded.beerName = _addBeerText.text;
+    //firebase logic
 }
 
 /*

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Establishment.h"
 #import "AddBeerViewController.h"
+#import "Beer.h"
 #import <MapKit/MapKit.h>
 
 @interface EstablishmentDetailViewController : UIViewController <MKMapViewDelegate>

@@ -44,13 +44,14 @@
 
 
 -(void)unwindForSegue:(UIStoryboardSegue *)unwindSegue towardsViewController:(UIViewController *)subsequentVC{
-    AddBeerViewController *uvc = [unwindSegue sourceViewController];
-    [_currentEstablishment.beers addObject:uvc.addBeerText.text];
+    AddBeerViewController *vc = [unwindSegue sourceViewController];
+
+    [_currentEstablishment.beers addObject:vc.beerToBeAdded];
 }
 
 
 
-    
-    
+
+
 
 @end
