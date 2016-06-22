@@ -24,6 +24,7 @@
 }
 
 - (void)viewDidLoad {
+    self.navigationItem.title = @"Establishment List";
     [self getEstblishmentsFromDatabase];
      NSLog(@"Check: %@", _establishmentsArray.description);
     [super viewDidLoad];
@@ -172,6 +173,15 @@
  return YES;
  }
  */
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row%2 == 0) {
+        UIColor *altCellColor = [UIColor colorWithWhite:0.9 alpha:1];
+        cell.backgroundColor = altCellColor;
+    }
+    else{
+        cell.backgroundColor = [UIColor whiteColor];
+    }
+}
 
 
 
