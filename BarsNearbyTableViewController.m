@@ -10,10 +10,12 @@
 #import "GooglePlacesClientViewController.h"
 @import GoogleMaps;
 #import "EstablishmentDetailViewController.h"
+@import Firebase;
+@import FirebaseDatabase;
 
 @interface BarsNearbyTableViewController ()
 @property(nonatomic, strong) IBOutlet UITableView *tableView;
-@property(nonatomic) NSMutableArray *establishmentsArray;
+@property(strong, nonatomic) NSMutableArray *establishmentsArray;
 @end
 
 @implementation BarsNearbyTableViewController{
@@ -22,6 +24,8 @@
 }
 
 - (void)viewDidLoad {
+    [self getEstblishmentsFromDatabase];
+     NSLog(@"Check: %@", _establishmentsArray.description);
     [super viewDidLoad];
     [self getCurrentInfo];
     
@@ -85,6 +89,11 @@
             newEstablishment.beers = [[NSMutableArray alloc]init];
             
             NSLog(@"Name %@\n Lat %f\n Long %f\nAddress %@",newEstablishment.establishmentName, newEstablishment.location.latitude, newEstablishment.location.longitude, newEstablishment.streetAddress);
+            NSString *locationStringToPass = [NSString stringWithFormat:@"%f,%f", newEstablishment.location.latitude, newEstablishment.location.longitude];
+            NSDictionary *newEstablishmentInfo = @{@"establishment_name": newEstablishment.establishmentName, @"location": locationStringToPass};
+            FIRDatabaseReference *ref = [[FIRDatabase database] reference];
+            FIRDatabaseReference *establishmentRef = [ref child:@"establishments"].childByAutoId;
+            [establishmentRef setValue:newEstablishmentInfo];
         }
     }];
 
@@ -95,24 +104,40 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 5;
+    return [_establishmentsArray count];
 }
 
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"establishmentCell" forIndexPath:indexPath];
  
- // Configure the cell...
+     
+     UIImage *image1 = [UIImage imageNamed:@"beer-icon"];
+     cell.imageView.image = image1;
+     
+     cell.textLabel.text = [_establishmentsArray objectAtIndex:indexPath.row];
  
  return cell;
  }
- 
+
+- (void)getEstblishmentsFromDatabase {
+    _establishmentsArray = [[NSMutableArray alloc] init];
+    FIRDatabaseReference *ref = [[FIRDatabase database] reference];
+    FIRDatabaseReference *establishmentsRef = [ref child:@"establishments"];
+    
+    [establishmentsRef observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot *snapshot) {
+        for (FIRDataSnapshot *child in snapshot.children) {
+            if ([child.key isEqualToString:@"establishment_name"]) {
+                [_establishmentsArray addObject:child.value];
+            }
+        }
+        [self.tableView reloadData];
+    }];
+}
 
 /*
  // Override to support conditional editing of the table view.
