@@ -128,7 +128,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="kf4-xx-ypr">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HD4-6j-p1q"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HD4-6j-p1q">
+                            <connections>
+                                <segue destination="o9P-yL-ia0" kind="push" identifier="addBeerSegue" id="spb-XI-65Z"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapKit" destination="Usf-az-N92" id="obC-ET-5pa"/>
@@ -137,6 +141,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TaE-Bh-vOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-318" y="2595"/>
+        </scene>
+        <!--Add Beer View Controller-->
+        <scene sceneID="U5C-D1-io6">
+            <objects>
+                <viewController title="Add Beer View Controller" id="o9P-yL-ia0" customClass="AddBeerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hMM-A1-QOh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y47-gY-gbD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ST5-lg-Cxz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of Beer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaU-SL-7Z4">
+                                <rect key="frame" x="105" y="142" width="110" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7x-cs-gQj">
+                                <rect key="frame" x="136" y="343" width="50" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addBeerButtonPressed:" destination="o9P-yL-ia0" eventType="touchUpInside" id="zIU-tr-EC2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s8B-2y-oUn">
+                                <rect key="frame" x="39" y="190" width="225" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ejr-kf-M13"/>
+                    <connections>
+                        <outlet property="addBeerText" destination="s8B-2y-oUn" id="HWR-ZM-ReL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vjC-b5-7uN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99" y="2595"/>
         </scene>
         <!--User View Controller-->
         <scene sceneID="YSh-Ur-GAX">

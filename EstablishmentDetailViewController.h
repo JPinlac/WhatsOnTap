@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Establishment.h"
+#import "AddBeerViewController.h"
+
 @interface EstablishmentDetailViewController : UIViewController
-@property (nonatomic) Establishment *currentEstablishments;
+@property (nonatomic) Establishment *currentEstablishment;
 @end

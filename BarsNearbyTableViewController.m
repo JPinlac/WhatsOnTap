@@ -153,8 +153,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     EstablishmentDetailViewController *vc = [segue destinationViewController];
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
-//    vc.currentEstablishments =
+   // NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     
+    vc.currentEstablishment =[_establishmentsArray objectAtIndex:selectedIndexPath.row];
+    
+    
+   
 }
 
 

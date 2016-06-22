@@ -1,20 +1,18 @@
 //
-//  EstablishmentDetailViewController.m
+//  AddBeerViewController.m
 //  WhatsOnTap
 //
-//  Created by DetroitLabs on 6/21/16.
+//  Created by Sarmila on 6/22/16.
 //  Copyright © 2016 Detroit Labs. All rights reserved.
 //
 
-#import "EstablishmentDetailViewController.h"
-#import <MapKit/MapKit.h>
-@interface EstablishmentDetailViewController ()
-@property (weak, nonatomic) IBOutlet MKMapView *mapKit;
+#import "AddBeerViewController.h"
 
+@interface AddBeerViewController ()
 
 @end
 
-@implementation EstablishmentDetailViewController
+@implementation AddBeerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,28 +23,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)addBeerButtonPressed:(id)sender {
+}
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    AddBeerViewController *vc = [segue destinationViewController];
-
 }
-
-
-
--(void)unwindForSegue:(UIStoryboardSegue *)unwindSegue towardsViewController:(UIViewController *)subsequentVC{
-    AddBeerViewController *uvc = [unwindSegue sourceViewController];
-    [_currentEstablishment.beers addObject:uvc.addBeerText.text];
-}
-
-
-
-    
-    
+*/
 
 @end
