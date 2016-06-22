@@ -23,6 +23,8 @@
 		C61478FE1D186B1700C94314 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61478FC1D186B1700C94314 /* Main.storyboard */; };
 		C61479011D186C5A00C94314 /* NearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C61479001D186C5A00C94314 /* NearbyViewController.m */; };
 		C61479041D19C36B00C94314 /* BarsNearbyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C61479031D19C36B00C94314 /* BarsNearbyTableViewController.m */; };
+		C620D6941D1ACC3200E607B3 /* AddBeerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C620D6931D1ACC3200E607B3 /* AddBeerViewController.m */; };
+		C620D6961D1AFFB700E607B3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C620D6951D1AFFB700E607B3 /* MapKit.framework */; };
 		C672FBAD1D108FFF0046A932 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C672FBA81D108FFF0046A932 /* FeedViewController.m */; };
 		C672FBAE1D108FFF0046A932 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C672FBAA1D108FFF0046A932 /* SearchViewController.m */; };
 		C672FBAF1D108FFF0046A932 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C672FBAC1D108FFF0046A932 /* UserViewController.m */; };
@@ -68,6 +70,9 @@
 		C61479001D186C5A00C94314 /* NearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyViewController.m; sourceTree = "<group>"; };
 		C61479021D19C36B00C94314 /* BarsNearbyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarsNearbyTableViewController.h; path = ../BarsNearbyTableViewController.h; sourceTree = "<group>"; };
 		C61479031D19C36B00C94314 /* BarsNearbyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarsNearbyTableViewController.m; path = ../BarsNearbyTableViewController.m; sourceTree = "<group>"; };
+		C620D6921D1ACC3200E607B3 /* AddBeerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddBeerViewController.h; path = ../AddBeerViewController.h; sourceTree = "<group>"; };
+		C620D6931D1ACC3200E607B3 /* AddBeerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddBeerViewController.m; path = ../AddBeerViewController.m; sourceTree = "<group>"; };
+		C620D6951D1AFFB700E607B3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C672FBA71D108FFF0046A932 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		C672FBA81D108FFF0046A932 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		C672FBA91D108FFF0046A932 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = WhatsOnTap/SearchViewController.h; sourceTree = "<group>"; };
@@ -92,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C620D6961D1AFFB700E607B3 /* MapKit.framework in Frameworks */,
 				CAEDB7F515B954F3993C48A8 /* libPods-WhatsOnTap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +177,8 @@
 		431C61FF1D1045A5008D0249 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C620D6921D1ACC3200E607B3 /* AddBeerViewController.h */,
+				C620D6931D1ACC3200E607B3 /* AddBeerViewController.m */,
 				C61479021D19C36B00C94314 /* BarsNearbyTableViewController.h */,
 				C61479031D19C36B00C94314 /* BarsNearbyTableViewController.m */,
 				43C56D6C1D19CC9700C56ECC /* EstablishmentDetailViewController.h */,
@@ -210,6 +218,7 @@
 		80E1D07DEC23778A6FA9F577 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C620D6951D1AFFB700E607B3 /* MapKit.framework */,
 				A0560FBEE0B7B86DE28141AE /* libPods-WhatsOnTap.a */,
 			);
 			name = Frameworks;
@@ -353,6 +362,7 @@
 				43C56D6E1D19CC9700C56ECC /* EstablishmentDetailViewController.m in Sources */,
 				C672FBAD1D108FFF0046A932 /* FeedViewController.m in Sources */,
 				4377C7A91D13175000AAC885 /* Beer.m in Sources */,
+				C620D6941D1ACC3200E607B3 /* AddBeerViewController.m in Sources */,
 				431956D11D0F4370000EC3F5 /* AppDelegate.m in Sources */,
 				431956CE1D0F4370000EC3F5 /* main.m in Sources */,
 				C672FBB21D109C960046A932 /* Establishment.m in Sources */,

@@ -26,6 +26,7 @@
 }
 
 - (void)viewDidLoad {
+    self.navigationItem.title = @"Establishment List";
     [self getEstblishmentsFromDatabase];
     [super viewDidLoad];
     [self getCurrentInfo];
@@ -210,14 +211,27 @@
  return YES;
  }
  */
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row%2 == 0) {
+        UIColor *altCellColor = [UIColor colorWithWhite:0.9 alpha:1];
+        cell.backgroundColor = altCellColor;
+    }
+    else{
+        cell.backgroundColor = [UIColor whiteColor];
+    }
+}
 
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     EstablishmentDetailViewController *vc = [segue destinationViewController];
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
-//    vc.currentEstablishments =
+   // NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     
+    vc.currentEstablishment =[_establishmentsArray objectAtIndex:selectedIndexPath.row];
+    
+    
+   
 }
 
 
