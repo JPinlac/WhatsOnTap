@@ -58,6 +58,39 @@
     }];
 }
 
+#pragma mark - Add Establishment picker
+
+- (IBAction)pickPlace:(id)sender {
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(_locationManager.location.coordinate.latitude, _locationManager.location.coordinate.longitude);
+    CLLocationCoordinate2D northEast = CLLocationCoordinate2DMake(center.latitude + 0.001,
+                                                                  center.longitude + 0.001);
+    CLLocationCoordinate2D southWest = CLLocationCoordinate2DMake(center.latitude - 0.001,
+                                                                  center.longitude - 0.001);
+    GMSCoordinateBounds *viewport = [[GMSCoordinateBounds alloc] initWithCoordinate:northEast
+                                                                         coordinate:southWest];
+    GMSPlacePickerConfig *config = [[GMSPlacePickerConfig alloc] initWithViewport:viewport];
+    _placePicker = [[GMSPlacePicker alloc] initWithConfig:config];
+    
+    [_placePicker pickPlaceWithCallback:^(GMSPlace *place, NSError *error) {
+        if (error != nil) {
+            NSLog(@"Pick Place error %@", [error localizedDescription]);
+            return;
+        }
+        
+        if (place != nil) {
+            Establishment *newEstablishment = [[Establishment alloc]init];
+            newEstablishment.establishmentName = place.name;
+            newEstablishment.location = place.coordinate;
+            newEstablishment.streetAddress = [[place.formattedAddress componentsSeparatedByString:@", "] componentsJoinedByString:@"\n"];
+            newEstablishment.beers = [[NSMutableArray alloc]init];
+            
+            NSLog(@"Name %@\n Lat %f\n Long %f\nAddress %@",newEstablishment.establishmentName, newEstablishment.location.latitude, newEstablishment.location.longitude, newEstablishment.streetAddress);
+        }
+    }];
+
+}
+
+
 
 #pragma mark - Table view data source
 
