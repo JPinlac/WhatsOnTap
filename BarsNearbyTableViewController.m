@@ -14,8 +14,10 @@
 @import FirebaseDatabase;
 
 @interface BarsNearbyTableViewController ()
-@property(nonatomic, strong) IBOutlet UITableView *tableView;
-@property(strong, nonatomic) NSMutableArray *establishmentsArray;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *establishmentsArray;
+@property (strong, nonatomic) NSMutableArray *searchEstablishmentsArray;
+@property (weak, nonatomic) IBOutlet UITextField *searchEstablishmentTextField;
 @end
 
 @implementation BarsNearbyTableViewController{
@@ -26,18 +28,14 @@
 - (void)viewDidLoad {
     self.navigationItem.title = @"Establishment List";
     [self getEstblishmentsFromDatabase];
-     NSLog(@"Check: %@", _establishmentsArray.description);
     [super viewDidLoad];
     [self getCurrentInfo];
-    
-
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 
 - (void) getCurrentInfo{
@@ -50,7 +48,6 @@
         } else {
             NSLog(@"Error: %@", error.localizedDescription);
         }
-        
         
         if (placeLikelihoodList != nil) {
             GMSPlace *place = [[[placeLikelihoodList likelihoods] firstObject] place];
@@ -101,7 +98,6 @@
 }
 
 
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -109,7 +105,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_establishmentsArray count];
+    if ([_searchEstablishmentsArray count] == 0) {
+        return [_establishmentsArray count];
+    } else {
+        return [_searchEstablishmentsArray count];
+    }
 }
 
 
@@ -120,7 +120,11 @@
      UIImage *image1 = [UIImage imageNamed:@"beer-icon"];
      cell.imageView.image = image1;
      
-     cell.textLabel.text = [_establishmentsArray objectAtIndex:indexPath.row];
+     if ([_searchEstablishmentsArray count] == 0) {
+        cell.textLabel.text = [_establishmentsArray objectAtIndex:indexPath.row];
+     } else {
+        cell.textLabel.text = [_searchEstablishmentsArray objectAtIndex:indexPath.row];
+     }
  
  return cell;
  }
@@ -138,6 +142,40 @@
         }
         [self.tableView reloadData];
     }];
+}
+
+- (IBAction)searchEstablishmentButton:(UIButton *)sender {
+    [self searchEstablishments];
+    NSLog(@"Search results: %@", _searchEstablishmentsArray.description);
+    [self.tableView reloadData];
+}
+
+- (NSString*) sanitizeString:(NSString *)output {
+    // Create set of accepted characters
+    NSMutableCharacterSet *acceptedCharacters = [[NSMutableCharacterSet alloc] init];
+    [acceptedCharacters formUnionWithCharacterSet:[NSCharacterSet letterCharacterSet]];
+    [acceptedCharacters formUnionWithCharacterSet:[NSCharacterSet decimalDigitCharacterSet]];
+    [acceptedCharacters addCharactersInString:@" _-.!"];
+    
+    // Remove characters not in the set
+    output = [[output componentsSeparatedByCharactersInSet:[acceptedCharacters invertedSet]] componentsJoinedByString:@""];
+    output = [output lowercaseString];
+    return output;
+}
+
+- (void)searchEstablishments {
+    NSString *searchEstablishmentText;
+    _searchEstablishmentsArray = [[NSMutableArray alloc]init];
+    searchEstablishmentText = [_searchEstablishmentTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    searchEstablishmentText = [self sanitizeString:searchEstablishmentText];
+   
+    for (NSString *name in _establishmentsArray) {
+        if ([[[self sanitizeString:name] stringByReplacingOccurrencesOfString:@" " withString:@""] containsString:searchEstablishmentText]) {
+            [_searchEstablishmentsArray addObject:name];
+            NSLog(@"%@",_searchEstablishmentsArray);
+        }
+    }
+    
 }
 
 /*
