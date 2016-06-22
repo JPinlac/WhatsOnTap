@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "Establishment.h"
 
-@interface BarsNearbyTableViewController : UIViewController
+@interface BarsNearbyTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic) CLLocationCoordinate2D currentLocation;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @end
