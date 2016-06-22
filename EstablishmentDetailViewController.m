@@ -7,6 +7,9 @@
 //
 
 #import "EstablishmentDetailViewController.h"
+#import <MapKit/MapKit.h>
+@import MapKit;
+
 @interface EstablishmentDetailViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapKit;
 
