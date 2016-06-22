@@ -1,22 +1,20 @@
 //
-//  FeedViewController.m
-//  
+//  AddBeerViewController.m
+//  WhatsOnTap
 //
-//  Created by Sarmila on 6/14/16.
-//
+//  Created by Sarmila on 6/22/16.
+//  Copyright © 2016 Detroit Labs. All rights reserved.
 //
 
-#import "FeedViewController.h"
+#import "AddBeerViewController.h"
 
-@interface FeedViewController ()
+@interface AddBeerViewController ()
 
 @end
 
-@implementation FeedViewController
+@implementation AddBeerViewController
 
 - (void)viewDidLoad {
-    
-    self.navigationItem.title = @"Feed";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -24,6 +22,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)addBeerButtonPressed:(id)sender {
+    _beerToBeAdded = [[Beer alloc] init];
+    _beerToBeAdded.beerName = _addBeerText.text;
+    //firebase logic
 }
 
 /*
