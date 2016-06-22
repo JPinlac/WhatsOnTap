@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Establishment.h"
 #import "AddBeerViewController.h"
+#import <MapKit/MapKit.h>
 
-@interface EstablishmentDetailViewController : UIViewController
+@interface EstablishmentDetailViewController : UIViewController <MKMapViewDelegate>
 @property (nonatomic) Establishment *currentEstablishment;
 @end

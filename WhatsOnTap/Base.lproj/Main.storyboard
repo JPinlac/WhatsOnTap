@@ -64,6 +64,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="OSd-xJ-8t7" id="YRr-qp-utt"/>
+                                    <outlet property="delegate" destination="OSd-xJ-8t7" id="TVR-Et-fVD"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -8,6 +8,7 @@
 
 #import "EstablishmentDetailViewController.h"
 #import <MapKit/MapKit.h>
+@import MapKit;
 @interface EstablishmentDetailViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapKit;
 
@@ -19,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    MKCoordinateRegion adjustedRegion = [_mapKit regionThatFits: MKCoordinateRegionMakeWithDistance(_currentEstablishment.location, 50, 50)];
+    [_mapKit setRegion:adjustedRegion animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
