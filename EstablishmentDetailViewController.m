@@ -19,13 +19,17 @@
 @implementation EstablishmentDetailViewController
 
 - (void)viewDidLoad {
+    NSLog(@"%f   %f", _currentEstablishment.location.latitude, _currentEstablishment.location.latitude);
+//    NSLog(@"%@", _currentEstablishment.establishmentName);
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = _currentEstablishment.establishmentName;
     MKCoordinateRegion adjustedRegion;
     adjustedRegion.center.latitude = _currentEstablishment.location.latitude;
     adjustedRegion.center.longitude = _currentEstablishment.location.longitude;
     adjustedRegion.span.latitudeDelta = 0.005;
     adjustedRegion.span.longitudeDelta = -0.005;
+    [self.mapKit setRegion:adjustedRegion animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

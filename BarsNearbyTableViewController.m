@@ -144,13 +144,16 @@
             newEstablishment.uid = snapshot.key;
             if ([child.key isEqualToString:@"establishment_name"]) {
                 newEstablishment.establishmentName = child.value;
-            } else if ([child.key isEqualToString:@"location"]){
+            }
+            if ([child.key isEqualToString:@"location"]){
                 NSArray *items = [child.value componentsSeparatedByString:@","];
                 float latitude =[[items objectAtIndex:0] floatValue];
                 float longitude =[[items objectAtIndex:1] floatValue];
                 newEstablishment.location = CLLocationCoordinate2DMake(latitude, longitude);
-            }
+            } 
             [_establishmentsArray addObject:newEstablishment];
+            NSLog(@"%@", newEstablishment.establishmentName);
+            NSLog(@"%f   %f", newEstablishment.location.latitude, newEstablishment.location.latitude);
         }
         [self.tableView reloadData];
     }];
@@ -239,12 +242,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     EstablishmentDetailViewController *vc = [segue destinationViewController];
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
-   // NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    Establishment *testEstablishment =[_establishmentsArray objectAtIndex:selectedIndexPath.row];
+    vc.currentEstablishment = [_establishmentsArray objectAtIndex:selectedIndexPath.row];
     
-    vc.currentEstablishment =[_establishmentsArray objectAtIndex:selectedIndexPath.row];
     
-    
-   
+   NSLog(@"%f   %f", testEstablishment.location.latitude, testEstablishment.location.latitude);
 }
 
 

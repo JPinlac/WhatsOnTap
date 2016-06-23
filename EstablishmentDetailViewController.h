@@ -13,5 +13,5 @@
 #import <MapKit/MapKit.h>
 
 @interface EstablishmentDetailViewController : UIViewController <MKMapViewDelegate>
-@property (nonatomic) Establishment *currentEstablishment;
+@property (strong, nonatomic) Establishment *currentEstablishment;
 @end
