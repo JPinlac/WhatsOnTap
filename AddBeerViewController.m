@@ -41,12 +41,26 @@
     FIRDatabaseReference *ref = [[FIRDatabase database] reference];
     FIRDatabaseReference *beerRef = [ref child:@"beers"].childByAutoId;
     [beerRef setValue:newBeerInfo];
+    [self displayAlert:@"Congrats!" alertMessage:[NSString stringWithFormat:@"You successfully added beer - %@", newBeer.beerName]];
     
 }
 - (IBAction)addBeerAndBrewery:(UIButton *)sender {
     [self addBeerToDatabase];
 }
 
+-(void)displayAlert:(NSString *)alertTitle alertMessage:(NSString *)alertMessage {
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:alertTitle message:alertMessage preferredStyle:UIAlertControllerStyleAlert];
+    [self presentViewController:alertController animated:TRUE completion:nil];
+    
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        [self dismissViewControllerAnimated:TRUE completion:nil];
+        
+    }];
+    
+    [alertController addAction:action];
+}
 
 /*
 #pragma mark - Navigation
