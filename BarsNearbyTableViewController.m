@@ -139,9 +139,11 @@
     FIRDatabaseReference *establishmentsRef = [ref child:@"establishments"];
     
     [establishmentsRef observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot *snapshot) {
+        Establishment *newEstablishment = [[Establishment alloc] init];
         for (FIRDataSnapshot *child in snapshot.children) {
-            Establishment *newEstablishment = [[Establishment alloc] init];
+
             newEstablishment.uid = snapshot.key;
+            
             if ([child.key isEqualToString:@"establishment_name"]) {
                 newEstablishment.establishmentName = child.value;
             }
@@ -151,10 +153,11 @@
                 float longitude =[[items objectAtIndex:1] floatValue];
                 newEstablishment.location = CLLocationCoordinate2DMake(latitude, longitude);
             } 
-            [_establishmentsArray addObject:newEstablishment];
             NSLog(@"%@", newEstablishment.establishmentName);
             NSLog(@"%f   %f", newEstablishment.location.latitude, newEstablishment.location.latitude);
+            
         }
+        [_establishmentsArray addObject:newEstablishment];
         [self.tableView reloadData];
     }];
     
