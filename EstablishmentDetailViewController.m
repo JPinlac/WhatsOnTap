@@ -19,12 +19,10 @@
 @implementation EstablishmentDetailViewController
 
 - (void)viewDidLoad {
-    NSLog(@"%f   %f", _currentEstablishment.location.latitude, _currentEstablishment.location.latitude);
-//    NSLog(@"%@", _currentEstablishment.establishmentName);
     [super viewDidLoad];
     self.title = _currentEstablishment.establishmentName;
 
-    CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(_currentEstablishment.location.latitude, _currentEstablishment.location.latitude);
+    CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(_currentEstablishment.location.latitude, _currentEstablishment.location.longitude);
     MKCoordinateRegion adjustedRegion = [_mapKit regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 200, 200)];
     [self.mapKit setRegion:adjustedRegion animated:YES];
 }
