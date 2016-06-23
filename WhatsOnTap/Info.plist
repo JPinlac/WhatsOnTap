@@ -60,5 +60,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>GOOGLE_MAPS_API_KEY</key>
+    <string>AIzaSyCfBQ0MfBl8rZz7bjLs8aq1y2jQ5Gme21A</string>
 </dict>
 </plist>

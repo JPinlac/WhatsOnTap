@@ -230,14 +230,13 @@
  */
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row%2 == 0) {
-        UIColor *altCellColor = [UIColor colorWithWhite:0.9 alpha:1];
+        UIColor *altCellColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.9 alpha:1];
         cell.backgroundColor = altCellColor;
     }
     else{
         cell.backgroundColor = [UIColor whiteColor];
     }
 }
-
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
