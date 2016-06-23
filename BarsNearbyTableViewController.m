@@ -153,8 +153,6 @@
                 float longitude =[[items objectAtIndex:1] floatValue];
                 newEstablishment.location = CLLocationCoordinate2DMake(latitude, longitude);
             } 
-            NSLog(@"%@", newEstablishment.establishmentName);
-            NSLog(@"%f   %f", newEstablishment.location.latitude, newEstablishment.location.latitude);
             
         }
         [_establishmentsArray addObject:newEstablishment];
