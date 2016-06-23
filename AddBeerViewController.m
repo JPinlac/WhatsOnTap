@@ -17,6 +17,7 @@
 @implementation AddBeerViewController
 
 - (void)viewDidLoad {
+    self.navigationItem.title = @"Update Taplist";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

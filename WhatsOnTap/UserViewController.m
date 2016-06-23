@@ -15,6 +15,9 @@
 @implementation UserViewController
 
 - (void)viewDidLoad {
+//    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lighthouse.jpg"]];
+//    [self.view addSubview:backgroundView];
+  
     [super viewDidLoad];
     
     self.navigationItem.title = @"User Account";
@@ -25,6 +28,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 /*
 #pragma mark - Navigation
