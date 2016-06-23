@@ -51,7 +51,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="searchEstablishmentButton:" destination="OSd-xJ-8t7" eventType="touchUpInside" id="qDD-iY-bbG"/>
+                                    <action selector="searchEstablishmentButton:" destination="OSd-xJ-8t7" eventType="touchUpInside" id="B3W-Sf-0k3"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3SL-Oe-pLq">
@@ -143,7 +143,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="kf4-xx-ypr">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HD4-6j-p1q">
+                        <barButtonItem key="rightBarButtonItem" title="Update Taplist" id="HD4-6j-p1q">
                             <connections>
                                 <segue destination="o9P-yL-ia0" kind="push" identifier="addBeerSegue" id="spb-XI-65Z"/>
                             </connections>
