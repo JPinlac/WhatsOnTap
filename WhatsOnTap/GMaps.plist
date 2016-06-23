@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!--
-   GMaps.plist
-   WhatsOnTap
-
-   Created by Brandon Manson on 6/17/16.
-   Copyright (c) 2016 Detroit Labs. All rights reserved.
--->
+ GMaps.plist
+ WhatsOnTap
+ ​
+ Created by Brandon Manson on 6/17/16.
+ Copyright (c) 2016 Detroit Labs. All rights reserved.
+ -->
 <plist version="1.0">
     <dict>
         <key>GOOGLE_MAPS_API_KEY</key>
-        <string>AIzaSyCVOrxuPzjUKN2xRtnLbsR9aM_ptajS-V8</string>
+        <string>AIzaSyCfBQ0MfBl8rZz7bjLs8aq1y2jQ5Gme21A</string>
     </dict>
 </plist>
