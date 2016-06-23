@@ -18,10 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"intro.png"]];
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-//    _loginButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
-    loginButton.center = self.view.center;
+    //    _loginButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     loginButton.delegate = self;
+    CGRect btFrame = loginButton.frame;
+    btFrame.origin.x = 120;
+    btFrame.origin.y = 500;
+    loginButton.frame = btFrame;
     [self.view addSubview:loginButton];
 }
 

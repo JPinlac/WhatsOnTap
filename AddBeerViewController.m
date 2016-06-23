@@ -7,6 +7,8 @@
 //
 
 #import "AddBeerViewController.h"
+@import Firebase;
+@import FirebaseDatabase;
 
 @interface AddBeerViewController ()
 
@@ -23,11 +25,28 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)addBeerButtonPressed:(id)sender {
-    _beerToBeAdded = [[Beer alloc] init];
-    _beerToBeAdded.beerName = _addBeerText.text;
-    //firebase logic
+//- (IBAction)addBeerButtonPressed:(id)sender {
+//    _beerToBeAdded = [[Beer alloc] init];
+//    _beerToBeAdded.beerName = _addBeerText.text;
+//    //firebase logic
+//}
+
+- (void)addBeerToDatabase {
+    Beer *newBeer = [[Beer alloc]init];
+    newBeer.beerName = _addBeerText.text;
+    newBeer.brewery = _addBreweryText.text;
+    newBeer.establishments = [[NSMutableArray alloc]init];
+    
+    NSDictionary *newBeerInfo = @{@"beer_name": newBeer.beerName, @"brewery": newBeer.brewery};
+    FIRDatabaseReference *ref = [[FIRDatabase database] reference];
+    FIRDatabaseReference *beerRef = [ref child:@"beers"].childByAutoId;
+    [beerRef setValue:newBeerInfo];
+    
 }
+- (IBAction)addBeerAndBrewery:(UIButton *)sender {
+    [self addBeerToDatabase];
+}
+
 
 /*
 #pragma mark - Navigation
