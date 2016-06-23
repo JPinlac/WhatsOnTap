@@ -188,9 +188,9 @@
     searchEstablishmentText = [_searchEstablishmentTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
     searchEstablishmentText = [self sanitizeString:searchEstablishmentText];
    
-    for (NSString *name in _establishmentsArray) {
-        if ([[[self sanitizeString:name] stringByReplacingOccurrencesOfString:@" " withString:@""] containsString:searchEstablishmentText]) {
-            [_searchEstablishmentsArray addObject:name];
+    for (Establishment *establishment in _establishmentsArray) {
+        if ([[[self sanitizeString:establishment.establishmentName] stringByReplacingOccurrencesOfString:@" " withString:@""] containsString:searchEstablishmentText]) {
+            [_searchEstablishmentsArray addObject:establishment];
             NSLog(@"%@",_searchEstablishmentsArray);
         }
     }
@@ -245,11 +245,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     EstablishmentDetailViewController *vc = [segue destinationViewController];
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
-    Establishment *testEstablishment =[_establishmentsArray objectAtIndex:selectedIndexPath.row];
-    vc.currentEstablishment = [_establishmentsArray objectAtIndex:selectedIndexPath.row];
-    
-    
-   NSLog(@"%f   %f", testEstablishment.location.latitude, testEstablishment.location.latitude);
+    if ([_searchEstablishmentsArray count] == 0) {
+        vc.currentEstablishment = [_establishmentsArray objectAtIndex:selectedIndexPath.row];
+    } else {
+        vc.currentEstablishment = [_searchEstablishmentsArray objectAtIndex:selectedIndexPath.row];
+    }
 }
 
 
