@@ -48,17 +48,16 @@
     [self displayAlert:@"Congrats!" alertMessage:[NSString stringWithFormat:@"You successfully added beer - %@", newBeer.beerName]];
     
 }
-
-- (void)addUpdateToDatabaseForEstablishment:(NSString *)establishment withBeer:(NSString *)beer andUpdateType:(NSString *)updateType {
-    NSDictionary *updateInfo = @{@"establishment": establishment, @"beer": beer, @"update_type": updateType, @"update_time": [NSString stringWithFormat:@"%@", [NSDate date]]};
-    FIRDatabaseReference *ref = [[FIRDatabase database] reference];
-    FIRDatabaseReference *updateRef = [ref child:@"updates"].childByAutoId;
-    [updateRef setValue:updateInfo];
-}
-
 - (IBAction)addBeerAndBrewery:(UIButton *)sender {
-    [self addBeerToDatabase];
+    if (_addBeerText.text.length == 0 || _addBreweryText.text.length == 0) {
+        [self displayAlert:@"Incomplete" alertMessage:[NSString stringWithFormat:@"Please add both beer and brewery to proceed"]];
+
+    } else {
+        [self addBeerToDatabase];
+    }
 }
+
+
 
 -(void)displayAlert:(NSString *)alertTitle alertMessage:(NSString *)alertMessage {
     
@@ -66,22 +65,21 @@
     [self presentViewController:alertController animated:TRUE completion:nil];
     
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        
         [self dismissViewControllerAnimated:TRUE completion:nil];
-        
     }];
     
     [alertController addAction:action];
 }
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+    BeerDetailTableViewController *vc = [segue destinationViewController];
+    vc.linkedEstablishment = _addEstablishment;
+ //   vc.beerListArray = _beersArray;
 }
-*/
+
 
 @end

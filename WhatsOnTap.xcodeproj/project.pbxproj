@@ -18,10 +18,10 @@
 		43C56D6E1D19CC9700C56ECC /* EstablishmentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C56D6D1D19CC9700C56ECC /* EstablishmentDetailViewController.m */; };
 		941CF2171D1436EE0091A39A /* GMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 941CF2161D1436EE0091A39A /* GMaps.plist */; };
 		94640F791D0F47610035A2DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94640F781D0F47610035A2DE /* GoogleService-Info.plist */; };
-		94E730331D1CA25800907219 /* FeedViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E730321D1CA25800907219 /* FeedViewTableViewController.m */; };
-		94E730351D1D446900907219 /* beer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94E730341D1D446900907219 /* beer.jpg */; };
-		94E730391D1D44B400907219 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 94E730381D1D44B400907219 /* images.png */; };
-		94E7303B1D1D44DE00907219 /* lighthouse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94E7303A1D1D44DE00907219 /* lighthouse.jpg */; };
+		B8E3BA911D1CCA240019E384 /* beer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E3BA901D1CCA240019E384 /* beer.jpg */; };
+		B8E3BA931D1CCA4B0019E384 /* lighthouse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E3BA921D1CCA4B0019E384 /* lighthouse.jpg */; };
+		B8E3BA951D1CCA850019E384 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E3BA941D1CCA850019E384 /* images.png */; };
+		B8E3BA981D1D6E0C0019E384 /* BeerDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E3BA971D1D6E0C0019E384 /* BeerDetailTableViewController.m */; };
 		B8E77E9F1D1AD6FF00B7F1EF /* beer-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E77E9E1D1AD6FF00B7F1EF /* beer-icon.png */; };
 		C61478FB1D143F1300C94314 /* GooglePlacesClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C61478FA1D143F1300C94314 /* GooglePlacesClientViewController.m */; };
 		C61478FE1D186B1700C94314 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61478FC1D186B1700C94314 /* Main.storyboard */; };
@@ -71,6 +71,11 @@
 		94E730381D1D44B400907219 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = images.png; path = ../../../../Downloads/images.png; sourceTree = "<group>"; };
 		94E7303A1D1D44DE00907219 /* lighthouse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lighthouse.jpg; path = ../../../../Downloads/lighthouse.jpg; sourceTree = "<group>"; };
 		A0560FBEE0B7B86DE28141AE /* libPods-WhatsOnTap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhatsOnTap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E3BA901D1CCA240019E384 /* beer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beer.jpg; sourceTree = "<group>"; };
+		B8E3BA921D1CCA4B0019E384 /* lighthouse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lighthouse.jpg; sourceTree = "<group>"; };
+		B8E3BA941D1CCA850019E384 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
+		B8E3BA961D1D6E0C0019E384 /* BeerDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerDetailTableViewController.h; sourceTree = "<group>"; };
+		B8E3BA971D1D6E0C0019E384 /* BeerDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerDetailTableViewController.m; sourceTree = "<group>"; };
 		B8E77E9E1D1AD6FF00B7F1EF /* beer-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beer-icon.png"; sourceTree = "<group>"; };
 		C61478F91D143F1300C94314 /* GooglePlacesClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GooglePlacesClientViewController.h; path = WhatsOnTap/GooglePlacesClientViewController.h; sourceTree = "<group>"; };
 		C61478FA1D143F1300C94314 /* GooglePlacesClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GooglePlacesClientViewController.m; path = WhatsOnTap/GooglePlacesClientViewController.m; sourceTree = "<group>"; };
@@ -154,9 +159,9 @@
 		431956CC1D0F4370000EC3F5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				94E7303A1D1D44DE00907219 /* lighthouse.jpg */,
-				94E730381D1D44B400907219 /* images.png */,
-				94E730341D1D446900907219 /* beer.jpg */,
+				B8E3BA941D1CCA850019E384 /* images.png */,
+				B8E3BA921D1CCA4B0019E384 /* lighthouse.jpg */,
+				B8E3BA901D1CCA240019E384 /* beer.jpg */,
 				B8E77E9E1D1AD6FF00B7F1EF /* beer-icon.png */,
 				C69FE5421D116B20006F281F /* home_selected.png */,
 				C69FE5431D116B20006F281F /* home_selected@2x.png */,
@@ -203,6 +208,8 @@
 				C672FBAC1D108FFF0046A932 /* UserViewController.m */,
 				431C62001D104D45008D0249 /* LoginViewController.h */,
 				431C62011D104D45008D0249 /* LoginViewController.m */,
+				B8E3BA961D1D6E0C0019E384 /* BeerDetailTableViewController.h */,
+				B8E3BA971D1D6E0C0019E384 /* BeerDetailTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -304,13 +311,13 @@
 				431956DC1D0F4370000EC3F5 /* LaunchScreen.storyboard in Resources */,
 				C69FE5691D116B20006F281F /* tabbar@2x.png in Resources */,
 				C69FE5591D116B20006F281F /* home@2x.png in Resources */,
+				B8E3BA931D1CCA4B0019E384 /* lighthouse.jpg in Resources */,
 				94640F791D0F47610035A2DE /* GoogleService-Info.plist in Resources */,
 				C69FE5581D116B20006F281F /* home.png in Resources */,
-				94E730391D1D44B400907219 /* images.png in Resources */,
+				B8E3BA951D1CCA850019E384 /* images.png in Resources */,
 				C61478FE1D186B1700C94314 /* Main.storyboard in Resources */,
-				94E7303B1D1D44DE00907219 /* lighthouse.jpg in Resources */,
 				941CF2171D1436EE0091A39A /* GMaps.plist in Resources */,
-				94E730351D1D446900907219 /* beer.jpg in Resources */,
+				B8E3BA911D1CCA240019E384 /* beer.jpg in Resources */,
 				431956D91D0F4370000EC3F5 /* Assets.xcassets in Resources */,
 				C69FE5561D116B20006F281F /* home_selected.png in Resources */,
 				C69FE5571D116B20006F281F /* home_selected@2x.png in Resources */,
@@ -375,6 +382,7 @@
 			files = (
 				4377C7AC1D131A1100AAC885 /* Update.m in Sources */,
 				C672FBAF1D108FFF0046A932 /* UserViewController.m in Sources */,
+				B8E3BA981D1D6E0C0019E384 /* BeerDetailTableViewController.m in Sources */,
 				431C61FD1D104595008D0249 /* User.m in Sources */,
 				43C56D6E1D19CC9700C56ECC /* EstablishmentDetailViewController.m in Sources */,
 				C672FBAD1D108FFF0046A932 /* FeedViewController.m in Sources */,

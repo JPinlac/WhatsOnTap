@@ -67,12 +67,8 @@
 // when user tap the row, what action you want to perform
 - (void)tableView:(UITableView *)theTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"selected %d row", indexPath.row);
+    NSLog(@"selected %ld row", (long)indexPath.row);
 }
-
-
-
-
 
 
 #pragma mark - Navigation
@@ -82,10 +78,8 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     AddBeerViewController *vc = [segue destinationViewController];
-    vc.establishmentName = _currentEstablishment.establishmentName;
-
+    vc.addEstablishment = _currentEstablishment;
 }
-
 
 
 -(void)unwindForSegue:(UIStoryboardSegue *)unwindSegue towardsViewController:(UIViewController *)subsequentVC{
