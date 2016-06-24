@@ -82,6 +82,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     AddBeerViewController *vc = [segue destinationViewController];
+    vc.establishmentName = _currentEstablishment.establishmentName;
 
 }
 

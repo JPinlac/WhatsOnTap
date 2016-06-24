@@ -13,7 +13,7 @@
 @interface AddBeerViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *addBeerText;
 @property (weak, nonatomic) IBOutlet UITextField *addBreweryText;
-
+@property (strong, nonatomic) NSString *establishmentName;
 @property (nonatomic) Beer *beerToBeAdded;
 
 @end
