@@ -57,6 +57,13 @@
     }
 }
 
+- (void)addUpdateToDatabaseForEstablishment:(NSString *)establishmentName withBeer:(NSString *)beerName andUpdateType:(NSString *)updateType {
+    FIRDatabaseReference *ref = [[FIRDatabase database] reference];
+    FIRDatabaseReference *updateRef = [ref child:@"updates"].childByAutoId;
+    
+    NSDictionary *updateInfo = @{@"establishment": establishmentName, @"beer": beerName, @"update_type": updateType, @"update_time": [NSString stringWithFormat:@"%@", [NSDate date]]};
+    [updateRef setValue:updateInfo];
+}
 
 
 -(void)displayAlert:(NSString *)alertTitle alertMessage:(NSString *)alertMessage {
