@@ -19,4 +19,5 @@
 @property (nonatomic) Beer *beerToBeAdded;
 @property (nonatomic) Establishment *addEstablishment;
 
+- (void)addUpdateToDatabaseForEstablishment:(NSString *)establishmentName  withBeer:(NSString *)beerName andUpdateType:(NSString *)updateType;
 @end

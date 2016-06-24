@@ -44,7 +44,7 @@
     FIRDatabaseReference *beerRef = [ref child:@"beers"].childByAutoId;
     newBeer.uid = beerRef.key;
     [beerRef setValue:newBeerInfo];
-    [self addUpdateToDatabaseForEstablishment:_establishmentName withBeer:newBeer.beerName andUpdateType:@"beer_added"];
+    [self addUpdateToDatabaseForEstablishment:_addEstablishment.establishmentName withBeer:newBeer.beerName andUpdateType:@"beer_added"];
     [self displayAlert:@"Congrats!" alertMessage:[NSString stringWithFormat:@"You successfully added beer - %@", newBeer.beerName]];
     
 }
