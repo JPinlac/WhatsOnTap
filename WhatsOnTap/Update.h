@@ -11,6 +11,7 @@
 @interface Update : NSObject
 @property (strong, nonatomic) NSString *updateType;
 //possible types beerRemovedFromTaplist, beerAddedToTaplist, beerCreated. establishmentCreated, reviewPosted, ratingPosted
-@property (strong, nonatomic) NSString *user;
-@property (strong, nonatomic) NSDate *publishedAt;
+@property (strong, nonatomic) NSDate *updateTime;
+@property (strong, nonatomic) NSString *establishmentName;
+@property (strong, nonatomic) NSString *beerName;
 @end

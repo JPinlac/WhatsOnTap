@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Update.h"
 
 @interface FeedViewTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *updates;
+
+- (void)getUpdatesFromDatabase;
 
 @end

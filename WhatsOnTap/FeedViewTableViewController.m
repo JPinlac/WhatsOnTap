@@ -7,6 +7,8 @@
 //
 
 #import "FeedViewTableViewController.h"
+@import Firebase;
+@import FirebaseDatabase;
 
 @interface FeedViewTableViewController ()
 
@@ -15,6 +17,7 @@
 @implementation FeedViewTableViewController
 
 - (void)viewDidLoad {
+    [self getUpdatesFromDatabase];
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -29,27 +32,56 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)getUpdatesFromDatabase {
+    if (_updates == nil) {
+        _updates = [[NSMutableArray alloc] init];
+    }
+    FIRDatabaseReference *ref = [[FIRDatabase database] reference];
+    FIRDatabaseReference *updatesRef = [ref child:@"updates"];
+    
+    [updatesRef observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot *snapshot) {
+        Update *update = [[Update alloc]init];
+        for (FIRDataSnapshot *child in snapshot.children) {
+            if ([child.key isEqualToString:@"beer"]) {
+                update.beerName = child.value;
+            }
+            if ([child.key isEqualToString:@"establishment"]) {
+                update.establishmentName = child.value;
+            }
+            if ([child.key isEqualToString:@"update_time"]) {
+                NSDate *date;
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"yyyy-MM-dd' 'HH:mm:ss' 'ZZZZ"];
+                date = [dateFormatter dateFromString:child.value];
+                update.updateTime = date;
+                NSLog(@"%@ date: %@", update.beerName, update.updateTime);
+            }
+        }
+        [_updates addObject:update];
+        [self.tableView reloadData];
+    }];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [_updates count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"updateCell" forIndexPath:indexPath];
+    Update *updateInCell = [_updates objectAtIndex:indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ on tap at %@", updateInCell.beerName, updateInCell.establishmentName];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -94,7 +126,13 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (IBAction)refreshTableView:(UIRefreshControl *)sender {
-}
+//- (IBAction)refreshTableView:(UIRefreshControl *)sender {
+//    
+//    [_updates requestData:^{
+//        [self.tableView reloadData];
+//        
+//        [sender endRefreshing];
+//    }];
+//}
 
 @end
