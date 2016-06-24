@@ -18,6 +18,7 @@
 		43C56D6E1D19CC9700C56ECC /* EstablishmentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C56D6D1D19CC9700C56ECC /* EstablishmentDetailViewController.m */; };
 		941CF2171D1436EE0091A39A /* GMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 941CF2161D1436EE0091A39A /* GMaps.plist */; };
 		94640F791D0F47610035A2DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94640F781D0F47610035A2DE /* GoogleService-Info.plist */; };
+		94C4E5811D1DA83C00EAFC9A /* FeedViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E730321D1CA25800907219 /* FeedViewTableViewController.m */; };
 		B8E3BA911D1CCA240019E384 /* beer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E3BA901D1CCA240019E384 /* beer.jpg */; };
 		B8E3BA931D1CCA4B0019E384 /* lighthouse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8E3BA921D1CCA4B0019E384 /* lighthouse.jpg */; };
 		B8E3BA951D1CCA850019E384 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E3BA941D1CCA850019E384 /* images.png */; };
@@ -67,9 +68,6 @@
 		94640F781D0F47610035A2DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94E730311D1CA25800907219 /* FeedViewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewTableViewController.h; sourceTree = "<group>"; };
 		94E730321D1CA25800907219 /* FeedViewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewTableViewController.m; sourceTree = "<group>"; };
-		94E730341D1D446900907219 /* beer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = beer.jpg; path = ../../../../Downloads/beer.jpg; sourceTree = "<group>"; };
-		94E730381D1D44B400907219 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = images.png; path = ../../../../Downloads/images.png; sourceTree = "<group>"; };
-		94E7303A1D1D44DE00907219 /* lighthouse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lighthouse.jpg; path = ../../../../Downloads/lighthouse.jpg; sourceTree = "<group>"; };
 		A0560FBEE0B7B86DE28141AE /* libPods-WhatsOnTap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhatsOnTap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E3BA901D1CCA240019E384 /* beer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beer.jpg; sourceTree = "<group>"; };
 		B8E3BA921D1CCA4B0019E384 /* lighthouse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lighthouse.jpg; sourceTree = "<group>"; };
@@ -380,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94C4E5811D1DA83C00EAFC9A /* FeedViewTableViewController.m in Sources */,
 				4377C7AC1D131A1100AAC885 /* Update.m in Sources */,
 				C672FBAF1D108FFF0046A932 /* UserViewController.m in Sources */,
 				B8E3BA981D1D6E0C0019E384 /* BeerDetailTableViewController.m in Sources */,
@@ -395,7 +394,6 @@
 				C61479011D186C5A00C94314 /* NearbyViewController.m in Sources */,
 				C61479041D19C36B00C94314 /* BarsNearbyTableViewController.m in Sources */,
 				C61478FB1D143F1300C94314 /* GooglePlacesClientViewController.m in Sources */,
-				94E730331D1CA25800907219 /* FeedViewTableViewController.m in Sources */,
 				431C62021D104D45008D0249 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
