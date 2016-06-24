@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     self.navigationItem.title = @"Update Taplist";
     [super viewDidLoad];
+    NSLog(@"%@", [NSDate date]);
     // Do any additional setup after loading the view.
 }
 
@@ -41,11 +42,12 @@
     NSDictionary *newBeerInfo = @{@"beer_name": newBeer.beerName, @"brewery": newBeer.brewery};
     FIRDatabaseReference *ref = [[FIRDatabase database] reference];
     FIRDatabaseReference *beerRef = [ref child:@"beers"].childByAutoId;
+    newBeer.uid = beerRef.key;
     [beerRef setValue:newBeerInfo];
+    [self addUpdateToDatabaseForEstablishment:_establishmentName withBeer:newBeer.beerName andUpdateType:@"beer_added"];
     [self displayAlert:@"Congrats!" alertMessage:[NSString stringWithFormat:@"You successfully added beer - %@", newBeer.beerName]];
+    
 }
-
-
 - (IBAction)addBeerAndBrewery:(UIButton *)sender {
     if (_addBeerText.text.length == 0 || _addBreweryText.text.length == 0) {
         [self displayAlert:@"Incomplete" alertMessage:[NSString stringWithFormat:@"Please add both beer and brewery to proceed"]];
