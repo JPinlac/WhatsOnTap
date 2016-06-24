@@ -141,4 +141,13 @@
 }
 */
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row%2 == 0) {
+        UIColor *altCellColor = [UIColor colorWithRed:0.27 green:0.65 blue:0.95 alpha:1.0];         cell.backgroundColor = altCellColor;
+    }
+    else{
+        
+        cell.backgroundColor = [UIColor whiteColor];
+    }
+}
 @end
